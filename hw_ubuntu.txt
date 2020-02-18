@@ -1,0 +1,39 @@
+-- монтирование оптического диска с guest additions
+
+sudo mkdir /media/dmitry/additions
+
+-- запуска установки virtualbox гостевых дополнений
+
+sudo mount /dev/sr0 /media/dmitry/additions
+
+-- установка недостоющих зависимостей gcc make perl
+
+sudo apt update = обновление кеша репозиториев
+sudo apt install gcc make perl = установка gcc make perl
+
+
+-- установки ssh сервер
+
+sudo apt install openssh-server
+
+-- включение службы ssh сервера
+
+sudo systemctl start sshd
+
+-- открытие справки для команды ufw
+
+man ufw
+
+-- добавления порта 22 в исключения фаервола
+
+sudo ufw allow 22
+
+-- генерации ssh ключа
+
+ssh-keygen
+
+
+
+
+
+
